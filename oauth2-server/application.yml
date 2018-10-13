@@ -7,6 +7,8 @@ oauth2:
     path: "jwt_keypair.jks"
     alias: "jwt"
     password: "KCPzQVp8VVyHV9Ds"
+  access-token:
+    expire_in: 720  #accessToken有效期 30 天（720小时）
 spring.profiles.include:
   - flyway
   - mysql
