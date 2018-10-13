@@ -1,0 +1,32 @@
+server:
+  port: 8002
+flyway:
+  table: oauth-schema-version
+oauth2:
+  private-key:
+    path: "jwt_keypair.jks"
+    alias: "jwt"
+    password: "KCPzQVp8VVyHV9Ds"
+spring.profiles.include:
+  - flyway
+  - mysql
+---
+spring:
+  profiles: default
+server:
+  port: 8002
+---
+spring:
+  profiles: local
+server:
+  port: 8002
+---
+spring:
+  profiles: dev
+server:
+  port: 8080
+---
+spring:
+  profiles: prd
+server:
+  port: 8080

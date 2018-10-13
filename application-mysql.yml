@@ -1,0 +1,35 @@
+mysql:
+  host: 127.0.0.1
+  port: 3316
+  database: spring_cloud_demo
+  username: root
+  password: root123456
+spring:
+  datasource:
+    url: "jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.database}?useUnicode=true&zeroDateTimeBehavior=convertToNull"
+    username: ${mysql.username}
+    password: ${mysql.password}
+---
+spring:
+  profiles: default
+mysql:
+  host: 127.0.0.1
+  port: 3316
+---
+spring:
+  profiles: local
+mysql:
+  host: 127.0.0.1
+  port: 3316
+---
+spring:
+  profiles: dev
+mysql:
+  host: mysql
+  port: 3306
+---
+spring:
+  profiles: prd
+mysql:
+  host: mysql
+  port: 3306
