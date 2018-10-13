@@ -17,12 +17,6 @@ mysql:
   port: 3316
 ---
 spring:
-  profiles: local
-mysql:
-  host: 127.0.0.1
-  port: 3316
----
-spring:
   profiles: dev
 mysql:
   host: mysql

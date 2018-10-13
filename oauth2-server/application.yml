@@ -19,11 +19,6 @@ server:
   port: 8002
 ---
 spring:
-  profiles: local
-server:
-  port: 8002
----
-spring:
   profiles: dev
 server:
   port: 8080
