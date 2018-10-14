@@ -1,0 +1,24 @@
+server:
+  port: 8002
+flyway:
+  table: user-schema-version
+spring.profiles.include:
+  - flyway
+  - mysql
+  - rabbit
+  - swagger
+---
+spring:
+  profiles: default
+server:
+  port: 8003
+---
+spring:
+  profiles: dev
+server:
+  port: 8080
+---
+spring:
+  profiles: prd
+server:
+  port: 8080

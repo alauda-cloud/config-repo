@@ -1,0 +1,5 @@
+swagger:
+  oauth:
+    base-url:  http://127.0.0.1:8001
+    client-id: demo_client
+    client-secret: demo_secret
