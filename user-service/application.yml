@@ -10,6 +10,7 @@ spring.profiles.include:
   - mysql
   - rabbit
   - swagger
+  - jwt
 ---
 spring:
   profiles: default
