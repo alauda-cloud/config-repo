@@ -2,6 +2,9 @@ server:
   port: 8002
 flyway:
   table: user-schema-version
+swagger:
+  service-name: "用户服务"
+  service-desc: "管理用户信息"
 spring.profiles.include:
   - flyway
   - mysql
