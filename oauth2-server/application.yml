@@ -10,6 +10,7 @@ oauth2:
   access-token:
     expire-in: 720  #accessToken有效期 30 天（720小时）
 spring.profiles.include:
+  - undertow
   - flyway
   - mysql
 ---

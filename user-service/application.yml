@@ -6,11 +6,13 @@ swagger:
   service-name: "用户服务"
   service-desc: "管理用户信息"
 spring.profiles.include:
+  - undertow
   - flyway
   - mysql
   - rabbit
   - swagger
   - jwt
+  - feign
 ---
 spring:
   profiles: default
