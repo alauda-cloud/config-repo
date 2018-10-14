@@ -1,0 +1,30 @@
+server:
+  port: 8005
+flyway:
+  table: project-schema-version
+swagger:
+  service-name: "项目服务"
+  service-desc: "管理项目信息"
+spring.profiles.include:
+  - undertow
+  - flyway
+  - mysql
+  - rabbit
+  - swagger
+  - jwt
+  - feign
+---
+spring:
+  profiles: default
+server:
+  port: 8005
+---
+spring:
+  profiles: dev
+server:
+  port: 8080
+---
+spring:
+  profiles: prd
+server:
+  port: 8080
