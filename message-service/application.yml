@@ -1,0 +1,30 @@
+server:
+  port: 8006
+flyway:
+  table: message-schema-version
+swagger:
+  service-name: "消息服务"
+  service-desc: "管理消息"
+spring.profiles.include:
+  - undertow
+  - flyway
+  - mysql
+  - rabbit
+  - swagger
+  - jwt
+  - feign
+---
+spring:
+  profiles: default
+server:
+  port: 8006
+---
+spring:
+  profiles: dev
+server:
+  port: 8080
+---
+spring:
+  profiles: prd
+server:
+  port: 8080
